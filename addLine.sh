@@ -7,7 +7,7 @@
 
 ffmpeg -y \
 -i background.mp4 \
--loop 1 -i overlay.png \
+-loop 1 -i overlayH.png \
 -filter_complex "[1:v]loop=-1:size=1,setpts=N/FRAME_RATE/TB[v1];[0:v][v1]overlay=y='t*(H-h)':shortest=1" \
 -t 4 \
-addLineOutput.mp4
+addLineOutputH.mp4
